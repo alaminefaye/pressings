@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\ClothingTypeController;
 use App\Http\Controllers\Admin\PriceController;
 
 // Authentication Routes
@@ -34,6 +35,9 @@ Route::middleware(['auth'])->group(function () {
 
         // Services
         Route::resource('services', ServiceController::class);
+
+        // Clothing Types
+        Route::resource('clothing-types', ClothingTypeController::class);
 
         // Prices
         Route::get('/prices', [PriceController::class, 'index'])->name('prices.index');

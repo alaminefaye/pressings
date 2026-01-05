@@ -82,6 +82,13 @@
             </a>
         </li>
 
+        <li class="menu-item {{ request()->routeIs('admin.clothing-types.*') ? 'active' : '' }}">
+            <a href="{{ route('admin.clothing-types.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-closet"></i>
+                <div data-i18n="Types de Vêtements">Types de Vêtements</div>
+            </a>
+        </li>
+
         <li class="menu-item {{ request()->routeIs('admin.prices.*') ? 'active' : '' }}">
             <a href="{{ route('admin.prices.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-dollar"></i>
